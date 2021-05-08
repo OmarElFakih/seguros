@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/seguros/static/css/main.6dfa4670.chunk.css",
+    "main.js": "/seguros/static/js/main.4ec37040.chunk.js",
+    "main.js.map": "/seguros/static/js/main.4ec37040.chunk.js.map",
+    "runtime-main.js": "/seguros/static/js/runtime-main.1ac1f67b.js",
+    "runtime-main.js.map": "/seguros/static/js/runtime-main.1ac1f67b.js.map",
+    "static/css/2.fe62fa80.chunk.css": "/seguros/static/css/2.fe62fa80.chunk.css",
+    "static/js/2.f027b240.chunk.js": "/seguros/static/js/2.f027b240.chunk.js",
+    "static/js/2.f027b240.chunk.js.map": "/seguros/static/js/2.f027b240.chunk.js.map",
+    "index.html": "/seguros/index.html",
+    "precache-manifest.683edd19b8ed37ed77cd1b60228eab99.js": "/seguros/precache-manifest.683edd19b8ed37ed77cd1b60228eab99.js",
+    "service-worker.js": "/seguros/service-worker.js",
+    "static/css/2.fe62fa80.chunk.css.map": "/seguros/static/css/2.fe62fa80.chunk.css.map",
+    "static/css/main.6dfa4670.chunk.css.map": "/seguros/static/css/main.6dfa4670.chunk.css.map",
+    "static/js/2.f027b240.chunk.js.LICENSE.txt": "/seguros/static/js/2.f027b240.chunk.js.LICENSE.txt",
+    "static/media/covid.jpg": "/seguros/static/media/covid.4a9ec844.jpg",
+    "static/media/style.scss": "/seguros/static/media/illustration-section-02.63d0555d.svg",
+    "static/media/feature-tile-icon-01.svg": "/seguros/static/media/feature-tile-icon-01.0f9928d7.svg",
+    "static/media/feature-tile-icon-02.svg": "/seguros/static/media/feature-tile-icon-02.bd39f304.svg",
+    "static/media/feature-tile-icon-03.svg": "/seguros/static/media/feature-tile-icon-03.66f37ba5.svg",
+    "static/media/feature-tile-icon-04.svg": "/seguros/static/media/feature-tile-icon-04.836acd10.svg",
+    "static/media/feature-tile-icon-05.svg": "/seguros/static/media/feature-tile-icon-05.fa9ba00b.svg",
+    "static/media/feature-tile-icon-06.svg": "/seguros/static/media/feature-tile-icon-06.6a177696.svg",
+    "static/media/orangeMini.png": "/seguros/static/media/orangeMini.6d009b65.png",
+    "static/media/traveling.jpg": "/seguros/static/media/traveling.cbdef872.jpg",
+    "static/media/traveling2.jpg": "/seguros/static/media/traveling2.fb2ba884.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1ac1f67b.js",
+    "static/css/2.fe62fa80.chunk.css",
+    "static/js/2.f027b240.chunk.js",
+    "static/css/main.6dfa4670.chunk.css",
+    "static/js/main.4ec37040.chunk.js"
+  ]
+}
