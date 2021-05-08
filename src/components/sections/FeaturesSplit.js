@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import Button from '../elements/Button';
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -50,8 +51,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Workflow that just works',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'Cotiza con nosotros',
+    paragraph: ''
   };
 
   return (
@@ -65,18 +66,42 @@ const FeaturesSplit = ({
           <div className={splitClasses}>
 
             <div className="split-item">
+              
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  
                   </div>
-                <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                <h3 className="mt-0 mb-12 text-color-primary">
+                  Viajes por dia
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Para personas que viajan por cortos periodos de tiempo, especialmente en viajes de turismo, negocio o placer
                   </p>
+                <div>
+                  <Button tag="a" color="primary" wideMobile href="#">
+                    Cotizar plan
+                    </Button>
+                </div>
               </div>
-              <div className={
+
+              <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
+                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
+                  
+                  </div>
+                <h3 className="mt-0 mb-12 text-color-primary">
+                  Plan anual o multiviajes
+                  </h3>
+                <p className="m-0">
+                  Para personas que estan fuera de su pais por largos periodos de tiempo
+                  </p>
+                <div> 
+                  <Button tag="a" color="primary" wideMobile href="#">
+                    Cotizar plan
+                    </Button>
+                </div>
+              </div>
+              
+              {/*<div className={
                 classNames(
                   'split-item-image center-content-mobile reveal-from-bottom',
                   imageFill && 'split-item-image-fill'
@@ -87,20 +112,25 @@ const FeaturesSplit = ({
                   alt="Features split 01"
                   width={528}
                   height={396} />
-              </div>
+              </div>*/}
             </div>
 
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  
                   </div>
-                <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                <h3 className="mt-0 mb-12 text-color-primary">
+                  Consulte su plan
                   </h3>
-                <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <p className="m-0">  
+                Si usted ha comprado un Plan de Asistencias de Orange Travel Assist y desea consultar sus beneficios y cobertura, imprimir su vaucher y ver las condiciones generales de la poliza.                 
                   </p>
+                  <div> 
+                  <Button tag="a" color="primary" wideMobile href="#">
+                    Consultar plan
+                    </Button>
+                </div>
               </div>
               <div className={
                 classNames(
@@ -119,13 +149,18 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  
                   </div>
-                <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                <h3 className="mt-0 mb-12 text-color-primary">
+                  Viaje seguro, Viaje confiado, Viaje tranquilo
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Porque ahora todos nuestros planes incluyen cobertura covid-19 \n - Aplica para personas hasta los 70 años de edad \n - Para personas mayores de 70 años pueden obtener su cobertura adquiriendo el upgrade Covid +70 \n 
+                                    Consulte con su asesor de ventas o por mail \n
+                                    <a href="mailto:agentes@orangetravelassist.com" tabindex="0">
+                                        agentes@orangetravelassist.com
+                                    </a>
+                                    
                   </p>
               </div>
               <div className={
