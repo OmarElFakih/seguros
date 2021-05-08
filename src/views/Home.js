@@ -6,6 +6,7 @@ import FeaturesSplit from '../components/sections/FeaturesSplit';
 import Testimonial from '../components/sections/Testimonial';
 import Cta from '../components/sections/Cta';
 import OrangeCarousel from "../components/sections/OrangeCarousel";
+import EndingSplit from '../components/sections/EndingSplit';
 
 const Home = () => {
 
@@ -16,7 +17,8 @@ const Home = () => {
       <FeaturesTiles />
       <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
       <Testimonial topDivider />
-      <Cta split />
+      {/*<Cta split />*/}
+      <EndingSplit />
     </>
   );
 }

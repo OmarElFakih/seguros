@@ -55,8 +55,11 @@ const Testimonial = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
-          <div className={tilesClasses}>
+          {/*<SectionHeader data={sectionHeader} className="center-content" />*/}
+          <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{textAlign: 'center'}}>
+             La calidad de nuestros servicios es el resultado de un  <span className="text-color-primary">gran esfuerzo</span>
+            </h1>
+          {/*<div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-right" data-reveal-delay="200">
               <div className="tiles-item-inner">
@@ -109,7 +112,7 @@ const Testimonial = ({
               </div>
             </div>
 
-          </div>
+          </div>*/}
         </div>
       </div>
     </section>

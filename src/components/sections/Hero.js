@@ -60,7 +60,10 @@ const Hero = ({
       style={{ 
         backgroundImage: `url(${backgroundImage})` 
         }}>
-      <div className="container-sm">
+    <div style={{backgroundColor: 'rgba(63, 63, 63, 0.71)'} }>
+
+
+      <div className="container-sm" >
         <div className={innerClasses}>
           <div className="hero-content" >
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
@@ -103,6 +106,7 @@ const Hero = ({
             */}
        </div>
       </div>
+    </div>
   
     </section>
   );

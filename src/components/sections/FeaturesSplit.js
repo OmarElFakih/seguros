@@ -62,7 +62,10 @@ const FeaturesSplit = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          {/*<SectionHeader data={sectionHeader} className="center-content" />*/}
+          <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200" style={{textAlign: 'center'}}>
+             <span className="text-color-primary">Cotiza</span> con nosotros
+            </h1>
           <div className={splitClasses}>
 
             <div className="split-item">
@@ -77,7 +80,7 @@ const FeaturesSplit = ({
                 <p className="m-0">
                   Para personas que viajan por cortos periodos de tiempo, especialmente en viajes de turismo, negocio o placer
                   </p>
-                <div>
+                <div style={{ marginTop: `10px` }}>
                   <Button tag="a" color="primary" wideMobile href="#">
                     Cotizar plan
                     </Button>
@@ -94,7 +97,7 @@ const FeaturesSplit = ({
                 <p className="m-0">
                   Para personas que estan fuera de su pais por largos periodos de tiempo
                   </p>
-                <div> 
+                <div style={{ marginTop: `10px` }}> 
                   <Button tag="a" color="primary" wideMobile href="#">
                     Cotizar plan
                     </Button>
@@ -126,7 +129,7 @@ const FeaturesSplit = ({
                 <p className="m-0">  
                 Si usted ha comprado un Plan de Asistencias de Orange Travel Assist y desea consultar sus beneficios y cobertura, imprimir su vaucher y ver las condiciones generales de la poliza.                 
                   </p>
-                  <div> 
+                  <div style={{ marginTop: `10px` }}> 
                   <Button tag="a" color="primary" wideMobile href="#">
                     Consultar plan
                     </Button>
@@ -134,12 +137,12 @@ const FeaturesSplit = ({
               </div>
               <div className={
                 classNames(
-                  'split-item-image center-content-mobile reveal-from-bottom',
+                  'split-item-image center-content-mobile reveal-from-left',
                   imageFill && 'split-item-image-fill'
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-02.png')}
+                  src={require('./../../assets/images/traveling2.jpg')}
                   alt="Features split 02"
                   width={528}
                   height={396} />
@@ -155,8 +158,8 @@ const FeaturesSplit = ({
                   Viaje seguro, Viaje confiado, Viaje tranquilo
                   </h3>
                 <p className="m-0">
-                  Porque ahora todos nuestros planes incluyen cobertura covid-19 \n - Aplica para personas hasta los 70 años de edad \n - Para personas mayores de 70 años pueden obtener su cobertura adquiriendo el upgrade Covid +70 \n 
-                                    Consulte con su asesor de ventas o por mail \n
+                  Porque ahora todos nuestros planes incluyen cobertura covid-19 <br /> - Aplica para personas hasta los 70 años de edad <br/> - Para personas mayores de 70 años pueden obtener su cobertura adquiriendo el upgrade Covid +70 <br/> 
+                                    Consulte con su asesor de ventas o por mail <br/>
                                     <a href="mailto:agentes@orangetravelassist.com" tabindex="0">
                                         agentes@orangetravelassist.com
                                     </a>
@@ -165,12 +168,12 @@ const FeaturesSplit = ({
               </div>
               <div className={
                 classNames(
-                  'split-item-image center-content-mobile reveal-from-bottom',
+                  'split-item-image center-content-mobile reveal-from-right',
                   imageFill && 'split-item-image-fill'
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-03.png')}
+                  src={require('./../../assets/images/covid.jpg')}
                   alt="Features split 03"
                   width={528}
                   height={396} />
