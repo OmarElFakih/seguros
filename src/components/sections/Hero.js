@@ -58,7 +58,11 @@ const Hero = ({
       {...props}
       className={outerClasses}
       style={{ 
-        backgroundImage: `url(${backgroundImage})` 
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: `bottom`,
+        backgroundPositionX: `-333px`,
+        backgroundPositionY: `-391px`
+       
         }}>
     <div style={{backgroundColor: 'rgba(63, 63, 63, 0.71)'} }>
 

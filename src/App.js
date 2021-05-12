@@ -9,6 +9,13 @@ import LayoutDefault from './layouts/LayoutDefault';
 
 // Views 
 import Home from './views/Home';
+import Condicionado from './views/Condicionado';
+import CondicionesWeb from './views/CondicionesWeb';
+import Cotizador from './views/Cotizador';
+import PoliticaPrivacidad from './views/PoliticaPrivacidad';
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -37,6 +44,10 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path="/cotizador" component={Cotizador} layout={LayoutDefault} />
+          <AppRoute exact path="/condicionado" component={Condicionado} layout={LayoutDefault} />
+          <AppRoute exact path="/condicionesWeb" component={CondicionesWeb} layout={LayoutDefault} />
+          <AppRoute exact path="/politicaPrivacidad" component={PoliticaPrivacidad} layout={LayoutDefault} />
         </Switch>
       )} />
   );

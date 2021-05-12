@@ -8,6 +8,7 @@ import Cta from '../components/sections/Cta';
 import OrangeCarousel from "../components/sections/OrangeCarousel";
 import EndingSplit from '../components/sections/EndingSplit';
 
+
 const Home = () => {
 
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Testimonial topDivider />
       {/*<Cta split />*/}
       <EndingSplit />
+      
     </>
   );
 }

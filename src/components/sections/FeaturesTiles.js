@@ -55,7 +55,11 @@ const FeaturesTiles = ({
       className={outerClasses}
     >
       <div className="container">
-        <div className={innerClasses}>
+        <div className={innerClasses} 
+          style={{
+            marginTop: `40px`
+          }}
+        >
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={tilesClasses}>
 
