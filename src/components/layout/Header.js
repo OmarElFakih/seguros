@@ -78,6 +78,7 @@ const Header = ({
     <header
       {...props}
       className={classes}
+      style={{backgroundColor: "#1e283c"}}
     >
       <div className="container">
         <div className={
@@ -112,7 +113,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      <Link to="/" onClick={closeMenu}>Inicio</Link>
                     </li>
                   </ul>
                   {!hideSignin &&
@@ -120,7 +121,31 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        <Link to="/condicionado"  onClick={closeMenu}>Condicionado</Link>
+                      </li>
+                    </ul>}
+                    {!hideSignin &&
+                    <ul
+                      className="list-reset header-nav-right"
+                    >
+                      <li>
+                        <Link to="/condicionesWeb"  onClick={closeMenu}>Condiciones Web</Link>
+                      </li>
+                    </ul>}
+                    {!hideSignin &&
+                    <ul
+                      className="list-reset header-nav-right"
+                    >
+                      <li>
+                        <Link to="/politicaPrivacidad"  onClick={closeMenu}>Privacidad</Link>
+                      </li>
+                    </ul>}
+                    {!hideSignin &&
+                    <ul
+                      className="list-reset header-nav-right"
+                    >
+                      <li>
+                        <Link to="/cotizador"  onClick={closeMenu}>Cotizador</Link>
                       </li>
                     </ul>}
                 </div>

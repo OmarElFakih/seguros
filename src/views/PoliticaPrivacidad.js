@@ -1,10 +1,12 @@
 import React from 'react';
-
+import HeroPrivacidad from '../components/sections/HeroPrivacidad';
 
 const PoliticaPrivacidad = () => 
 {
     return (
-        <p>Política de privacidad</p>
+        <>
+            <HeroPrivacidad />
+        </>
 
     );
 

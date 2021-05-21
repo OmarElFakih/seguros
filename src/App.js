@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { useLocation, Switch } from 'react-router-dom';
+import { useLocation, Switch, HashRouter } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
@@ -25,8 +25,9 @@ const trackPage = page => {
   ReactGA.pageview(page);
 };
 
-const App = () => {
+//const App = () => {
 
+function App() {
   const childRef = useRef();
   let location = useLocation();
 
@@ -42,13 +43,15 @@ const App = () => {
     <ScrollReveal
       ref={childRef}
       children={() => (
-        <Switch>
+        //<Switch>
+        <HashRouter>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
           <AppRoute exact path="/cotizador" component={Cotizador} layout={LayoutDefault} />
           <AppRoute exact path="/condicionado" component={Condicionado} layout={LayoutDefault} />
           <AppRoute exact path="/condicionesWeb" component={CondicionesWeb} layout={LayoutDefault} />
           <AppRoute exact path="/politicaPrivacidad" component={PoliticaPrivacidad} layout={LayoutDefault} />
-        </Switch>
+        </HashRouter>
+        //</Switch>
       )} />
   );
 }

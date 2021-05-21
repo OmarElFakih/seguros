@@ -1,12 +1,13 @@
 import React from 'react';
+import CotizadorReactivo from "../components/sections/CotizadorReactivo"
 
 
 
 const Cotizador = () => 
 {
     return (
-        <p>Cotizador</p>
-
+       
+        <CotizadorReactivo />
     );
 
 }
