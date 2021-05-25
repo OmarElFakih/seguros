@@ -33,7 +33,14 @@ export default class DatePicker extends React.Component {
     this.setState(this.getInitialState());
   }
 
+  numberOfDays() {
+    var differenceInTime = this.state.to - this.state.from;
+    var differenceInDays = differenceInTime / (1000 * 3600 * 24);
+
+    return differenceInDays + 1;
+  }
   
+  static contextType = Context;
   
 
   render() {
@@ -41,20 +48,18 @@ export default class DatePicker extends React.Component {
     const modifiers = { start: from, end: to };
     const { store, actions } = this.context;
     
+
     return (
       <div className="RangeExample">
         <p>
-          {!from && !to && 'Please select the first day.'}
+          {/*!from && !to && 'Please select the first day.'}
           {from && !to && 'Please select the last day.'}
           {from &&
             to &&
             `Selected from ${from.toLocaleDateString()} to
-                ${to.toLocaleDateString()}`}{' '}
-          {from && to && (
-            <button className="link" onClick={this.handleResetClick}>
-              Reset
-            </button>
-          )}
+          ${to.toLocaleDateString()}`*/}
+          Duración del viaje
+          
         </p>
         <DayPicker
           className="Selectable"
@@ -63,6 +68,12 @@ export default class DatePicker extends React.Component {
           modifiers={modifiers}
           onDayClick={this.handleDayClick}
         />
+        <br />
+         {from && to && (
+            <button className="link" onClick={this.handleResetClick}>
+              Reastaurar
+            </button>
+          )}
         <Helmet>
           <style>{`
   .Selectable .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
@@ -83,7 +94,7 @@ export default class DatePicker extends React.Component {
 `}</style>
         </Helmet>
         <br />
-        <Button tag="a" color="primary" wideMobile onClick={() => actions.changeVisibility(4, true)}>
+        <Button tag="a" color="primary" wideMobile onClick={() => {actions.changeVisibility(4, true);  actions.updateTravelData("duracion", this.numberOfDays())}}>
           Actualizar
         </Button>
       </div>

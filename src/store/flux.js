@@ -27,7 +27,9 @@ const getState = ({ getStore, getActions, setStore }) => {
                 origen: " ",
                 destino: " ",
                 duracion: " ",
-                pasajeros: {}
+				partida: " ",
+                pasajeros: 1,
+				edades: [0,0,0,0,0,0,0,0]
             }
 
 		},
@@ -68,7 +70,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 
                 setStore({formFieldVisibility: demo});
 
-            }
+            },
+
+			updateTravelData: (key, value) => {
+				const tempTravelData = getStore().travelData;
+
+				tempTravelData[key] = value;
+
+				setStore({travelData: tempTravelData})
+
+				console.log(getStore().travelData);
+
+			}
 			
 		}
 	};
