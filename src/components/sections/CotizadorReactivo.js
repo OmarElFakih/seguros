@@ -6,6 +6,11 @@ import Button from '../elements/Button';
 import DatePicker from "../elements/DatePicker";
 import DuracionMaxima from "../elements/DuraciónMaxima";
 import Pasajeros from "../elements/Pasajeros";
+import { useMediaQuery } from 'react-responsive';
+import PlanDisponible from "../elements/PlanDisponible";
+
+
+
 
 
 const propTypes = {
@@ -42,18 +47,51 @@ const CotizadorReactivo = ({
     const { store, actions } = useContext(Context);
     const [ tipo, setTipo ] = useState("");
     const [ origen, setOrigen ]  = useState("");
+    const [ textoOrigen, setTextoOrigen ] = useState("");
     const [ destino, setDestino ] = useState("");
+    const [ textoDestino, setTextoDestino] = useState("");
+    const [ filling, setfilling] = useState(true);
 
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 750px)' })
+
+   
 
     return (
         <section
             {...props}
             className={outerClasses}
         >
+        {filling ? 
+        <>
+            <div style={{display: (isTabletOrMobile ? "block" : "-webkit-box"), paddingLeft: (isTabletOrMobile ? "0%" : "0%"), justifyContent: "center", position: "fixed", width: "100%", zIndex: "1"}} >
+                <div className={[(isTabletOrMobile ? "bloquesMobile" : ""), (store.formFieldVisibility[1] ? "bloquesCabeceraReactiva" : "bloqueEscondido")].join(" ")} >
+                    <p>tipo de viaje</p> <br />
+                    <p className={isTabletOrMobile ? "":"heavyWeight"}>{tipo}</p>
+                </div>
+                <div className={[(isTabletOrMobile ? "bloquesMobile" : ""), (store.formFieldVisibility[2] ? "bloquesCabeceraReactiva" : "bloqueEscondido")].join(" ")}>
+                    <p>origen</p> <br />
+                    <p className={isTabletOrMobile ? "":"heavyWeight"}>{textoOrigen}</p>
+                </div>
+                <div className={[(isTabletOrMobile ? "bloquesMobile" : ""), (store.formFieldVisibility[3] ? "bloquesCabeceraReactiva" : "bloqueEscondido")].join(" ")}>
+                    <p>destino</p> <br />
+                    <p className={isTabletOrMobile ? "":"heavyWeight"}>{textoDestino}</p>
+                </div>
+                <div className={[(isTabletOrMobile ? "bloquesMobile" : ""), (store.formFieldVisibility[4] ? "bloquesCabeceraReactiva" : "bloqueEscondido")].join(" ")}>
+                    <p>{store.travelData.partida}</p>
+                    <p>-</p>
+                    <p>{store.travelData.retorno}</p> <br />
+                </div>
+                <div className={[(isTabletOrMobile ? "bloquesMobile" : ""), (store.formFieldVisibility[5] ? "bloquesCabeceraReactiva" : "bloqueEscondido")].join(" ")}>
+                    <p>pasajeros</p> <br />
+                    <p className={isTabletOrMobile ? "":"heavyWeight"}>{store.travelData.pasajeros}</p>
+                </div>        
+            </div>    
             <div style={{ margin: "0px 20%" }}>
-                <form>
-                    {store.formFieldVisibility[0] ? <><select onChange = {e => setTipo(e.target.value)}>
-                        <option selected value="Tipo de viaje">Tipo de viaje</option>
+                <form style={{paddingTop:(isTabletOrMobile ? "115%" : "25%"), zIndex: "-3"}}>
+                    <div>   
+                    {store.formFieldVisibility[0] ? <>
+                    <select value={tipo} className="inputCotizador" onChange = {e => setTipo(e.target.value)}>
+                        <option value="">Tipo de viaje</option>
                         <option value="Viajes Anuales">Viajes anuales</option>
                         <option value="Viajes Por Dia">Viajes por dia</option>
                     </select><br />
@@ -62,8 +100,10 @@ const CotizadorReactivo = ({
                                                       </Button>
                     </> : null
                     }
+                    </div>
                     <br />
-                    {store.formFieldVisibility[1] ? <><select id="websitebundle_filterquote_origin" name="websitebundle_filterquote[origin]" required="required" className="general_input italic fsize-12 uppercase mb15" data-placeholder="Origen Del Viaje" placeholder="Origen Del Viaje" onChange = {e => setOrigen(e.target.value)}>
+                    <div>
+                    {store.formFieldVisibility[1] ? <><select  id="websitebundle_filterquote_origin" name="websitebundle_filterquote[origin]" required="required" className="inputCotizador general_input italic fsize-12 uppercase mb15" data-placeholder="Origen Del Viaje" placeholder="Origen Del Viaje" onChange = {e => {setOrigen(e.target.value); setTextoOrigen(e.target.options[e.target.selectedIndex].text);}}>
                         <option value="" selected="selected">Origen Del Viaje</option>
                         <option value="3">Afghanistán</option>
                         <option value="6">Albania</option>
@@ -128,8 +168,10 @@ const CotizadorReactivo = ({
                         </Button>
                     </> : null
                     }
+                    </div>
                     <br />
-                    {store.formFieldVisibility[2] ? <><select onChange = {e => setDestino(e.target.value)}>
+                    <div>
+                    {store.formFieldVisibility[2] ? <><select className="inputCotizador" onChange = {e => {setDestino(e.target.value); setTextoDestino(e.target.options[e.target.selectedIndex].text)}}>
                                                         <option selected value>Destino</option>
                                                         <option value={1}>Europa</option>
                                                         <option value={4}>Estados Unidos</option>
@@ -141,18 +183,53 @@ const CotizadorReactivo = ({
                                                       </Button>
                     </> : null
                     }
+                    </div>
                     <br />
+                    <div>
                     {store.formFieldVisibility[3] ? <>
                                                     {store.travelData.tipo == "Viajes Anuales" ? <DuracionMaxima /> : <DatePicker />}
                                                      
                                                       <br />
                     </> : null
                     }
+                    </div>
                     <br />
+                    <div>
                     {store.formFieldVisibility[4] ? <Pasajeros /> : null}
-
+                    </div>
+                    <div style={{paddingTop: "10%"}}>
+                    {store.formFieldVisibility[5] ?  
+                    
+                    <Button tag="a" color="primary" wideMobile onClick={() => {actions.resetVisibility(); actions.apiCallCotizar(); setfilling(false);}}>
+                    Cotizar
+                    </Button>
+                    : null}
+                    
+                    </div>
                 </form>
             </div>
+            </>
+            :
+            <>
+                <h3 className="text-color-primary">Planes Disponibles</h3>
+                <div style={{display: (isTabletOrMobile ? "block" : "flex"), justifyContent: "space-around"}} className="row">
+                        <PlanDisponible nombre="Orange1" precio={10} cobertura={100}/>
+                        <PlanDisponible nombre="Orange2" precio={100} cobertura={1000}/>
+                        <PlanDisponible nombre="Orange3" precio={20} cobertura={300}/>
+                        <PlanDisponible nombre="Orange4" precio={100} cobertura={500}/>
+                        <div className="w-100"></div>
+                        <PlanDisponible nombre="Orange5" precio={450} cobertura={10000}/>
+                        <PlanDisponible nombre="Orange6" precio={3000} cobertura={1000000}/>
+                        <PlanDisponible nombre="Orange7" precio={34} cobertura={300}/>
+                        <PlanDisponible nombre="Orange8" precio={10} cobertura={100}/>
+                </div>
+                <div style={{paddingTop: "5%"}}>
+                <Button tag="a" color="primary" wideMobile onClick = {() => setfilling(true)}>
+                    Volver al Cotizador
+                </Button>
+                </div>
+            </>
+            }
         </section>
 
     );

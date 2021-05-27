@@ -5,7 +5,7 @@ import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Button from '../elements/Button';
 import FormPage from '../elements/Form';
-import ContactInfo from '../elements/ContactInfo';
+
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -52,6 +52,8 @@ const EndingSplit = ({
     alignTop && 'align-top'
   );
 
+  
+
   return(
     <section
       {...props}
@@ -62,15 +64,14 @@ const EndingSplit = ({
           <div className={splitClasses}>
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
-                <p className="m-0">
-                  <ContactInfo />
-                  info de contacto
-                </p> 
+                
+                  {/*<ContactInfo />*/}                  
+               
               </div>
 
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
-                 <FormPage />
-                 <p>formulario de contacto</p>
+                 {/*<FormPage />*/}
+                 
               </div>
             </div>  
           </div>

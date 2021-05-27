@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Button from '../elements/Button';
+import {useHistory} from "react-router-dom";
+import { Context } from "../../store/appContext";
+
+
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -55,6 +59,10 @@ const FeaturesSplit = ({
     paragraph: ''
   };
 
+  const history = useHistory();
+
+  const { store, actions } = useContext(Context);
+
   return (
     <section
       {...props}
@@ -81,7 +89,7 @@ const FeaturesSplit = ({
                   Para personas que viajan por cortos periodos de tiempo, especialmente en viajes de turismo, negocio o placer
                   </p>
                 <div style={{ marginTop: `10px` }}>
-                  <Button tag="a" color="primary" wideMobile href="#">
+                  <Button tag="a" color="primary" wideMobile onClick={() => {history.push("/cotizador"); actions.resetVisibility();}}>
                     Cotizar plan
                     </Button>
                 </div>
@@ -98,7 +106,7 @@ const FeaturesSplit = ({
                   Para personas que estan fuera de su pais por largos periodos de tiempo
                   </p>
                 <div style={{ marginTop: `10px` }}> 
-                  <Button tag="a" color="primary" wideMobile href="#">
+                  <Button tag="a" color="primary" wideMobile onClick={() => {history.push("/cotizador"); actions.resetVisibility(); }}>
                     Cotizar plan
                     </Button>
                 </div>
@@ -130,7 +138,7 @@ const FeaturesSplit = ({
                 Si usted ha comprado un Plan de Asistencias de Orange Travel Assist y desea consultar sus beneficios y cobertura, imprimir su vaucher y ver las condiciones generales de la poliza.                 
                   </p>
                   <div style={{ marginTop: `10px` }}> 
-                  <Button tag="a" color="primary" wideMobile href="#">
+                  <Button tag="a" color="primary" wideMobile >
                     Consultar plan
                     </Button>
                 </div>
@@ -160,7 +168,7 @@ const FeaturesSplit = ({
                 <p className="m-0">
                   Porque ahora todos nuestros planes incluyen cobertura covid-19 <br /> - Aplica para personas hasta los 70 años de edad <br/> - Para personas mayores de 70 años pueden obtener su cobertura adquiriendo el upgrade Covid +70 <br/> 
                                     Consulte con su asesor de ventas o por mail <br/>
-                                    <a href="mailto:agentes@orangetravelassist.com" tabindex="0">
+                                    <a href="mailto:agentes@orangetravelassist.com" tabIndex="0">
                                         agentes@orangetravelassist.com
                                     </a>
                                     

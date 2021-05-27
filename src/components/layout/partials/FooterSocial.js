@@ -43,7 +43,7 @@ const FooterSocial = ({
             </svg>
           </a>
         </li>
-        <li>
+        {/*<li>
           <a href="https://google.com/">
             <svg
               width="16"
@@ -60,7 +60,7 @@ const FooterSocial = ({
               </g>
             </svg>
           </a>
-        </li>
+        </li>*/}
       </ul>
     </div>
   );

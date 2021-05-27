@@ -99,7 +99,7 @@ const propTypes = {
                 </p>
 
                 <Accordion key={1} >
-                    <Card style={{ backgroundColor: `#1e283c` }}>
+                    <Card className="blueBackground">
                         <Card.Header classname="border-bottom">
                             <Accordion.Toggle as={Button} variant="link" eventKey={1} style={{ color: `#faa520` }}>
                                 La dirección de coreo electrónico de usuario
@@ -120,7 +120,7 @@ const propTypes = {
                     </Card>
                 </Accordion>
                 <Accordion key={2} >
-                    <Card style={{ backgroundColor: `#1e283c` }}>
+                    <Card className="blueBackground">
                         <Card.Header classname="border-bottom">
                             <Accordion.Toggle as={Button} variant="link" eventKey={2} style={{ color: `#faa520` }}>
                                 La dirección postal del usuario
@@ -140,7 +140,7 @@ const propTypes = {
                     </Card>
                 </Accordion>
                 <Accordion key={3} >
-                    <Card style={{ backgroundColor: `#1e283c` }}>
+                    <Card className="blueBackground">
                         <Card.Header classname="border-bottom">
                             <Accordion.Toggle as={Button} variant="link" eventKey={3} style={{ color: `#faa520` }}>
                                 El número de teléfono del usuario
@@ -158,7 +158,7 @@ const propTypes = {
                     </Card>
                 </Accordion>
                 <Accordion key={4} >
-                    <Card style={{ backgroundColor: `#1e283c` }}>
+                    <Card className="blueBackground">
                         <Card.Header classname="border-bottom">
                             <Accordion.Toggle as={Button} variant="link" eventKey={4} style={{ color: `#faa520` }}>
                                 Cookies
@@ -179,7 +179,7 @@ const propTypes = {
                     </Card>
                 </Accordion>
                 <Accordion key={5} >
-                    <Card style={{ backgroundColor: `#1e283c` }}>
+                    <Card className="blueBackground">
                         <Card.Header classname="border-bottom">
                             <Accordion.Toggle as={Button} variant="link" eventKey={5} style={{ color: `#faa520` }}>
                                 Servidor de anuncios
@@ -196,7 +196,7 @@ const propTypes = {
                     </Card>
                 </Accordion>
                 <Accordion key={6} >
-                    <Card style={{ backgroundColor: `#1e283c` }}>
+                    <Card className="blueBackground">
                         <Card.Header classname="border-bottom">
                             <Accordion.Toggle as={Button} variant="link" eventKey={6} style={{ color: `#faa520` }}>
                                 Los derechos del usuario
@@ -246,7 +246,7 @@ const propTypes = {
                     </Card>
                 </Accordion>
                 <Accordion key={7} >
-                    <Card style={{ backgroundColor: `#1e283c` }}>
+                    <Card className="blueBackground">
                         <Card.Header classname="border-bottom">
                             <Accordion.Toggle as={Button} variant="link" eventKey={7} style={{ color: `#faa520` }}>
                                 Seguridad del sitio
@@ -295,7 +295,7 @@ const propTypes = {
                     </Card>
                 </Accordion>
                 <Accordion key={8} >
-                    <Card style={{ backgroundColor: `#1e283c` }}>
+                    <Card className="blueBackground">
                         <Card.Header classname="border-bottom">
                             <Accordion.Toggle as={Button} variant="link" eventKey={8} style={{ color: `#faa520` }}>
                                 Preguntas y comunicaciones adicionales

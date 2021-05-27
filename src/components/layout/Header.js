@@ -121,7 +121,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="/condicionado"  onClick={closeMenu}>Condicionado</Link>
+                        <Link to="/enmergencias"  onClick={closeMenu}>Enmergencias</Link>
                       </li>
                     </ul>}
                     {!hideSignin &&
@@ -129,17 +129,17 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="/condicionesWeb"  onClick={closeMenu}>Condiciones Web</Link>
+                        <Link to="/consulteSuPlan"  onClick={closeMenu}>Consulte Su Plan</Link>
                       </li>
                     </ul>}
-                    {!hideSignin &&
+                    {/*!hideSignin &&
                     <ul
                       className="list-reset header-nav-right"
                     >
                       <li>
                         <Link to="/politicaPrivacidad"  onClick={closeMenu}>Privacidad</Link>
                       </li>
-                    </ul>}
+                    </ul>*/}
                     {!hideSignin &&
                     <ul
                       className="list-reset header-nav-right"

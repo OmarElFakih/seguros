@@ -13,6 +13,8 @@ import Condicionado from './views/Condicionado';
 import CondicionesWeb from './views/CondicionesWeb';
 import Cotizador from './views/Cotizador';
 import PoliticaPrivacidad from './views/PoliticaPrivacidad';
+import consulteSuPlan from "./views/consulteSuPlan";
+import enmergencias from "./views/enmergencias";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -43,15 +45,19 @@ function App() {
     <ScrollReveal
       ref={childRef}
       children={() => (
-        //<Switch>
+        
         <HashRouter>
+          {/*<Switch>*/}
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
           <AppRoute exact path="/cotizador" component={Cotizador} layout={LayoutDefault} />
           <AppRoute exact path="/condicionado" component={Condicionado} layout={LayoutDefault} />
           <AppRoute exact path="/condicionesWeb" component={CondicionesWeb} layout={LayoutDefault} />
           <AppRoute exact path="/politicaPrivacidad" component={PoliticaPrivacidad} layout={LayoutDefault} />
+          <AppRoute exact path="/consulteSuPlan" component={consulteSuPlan} layout={LayoutDefault} />
+          <AppRoute exact path="/enmergencias" component={enmergencias} layout={LayoutDefault} />
+          {/*<Switch>*/}
         </HashRouter>
-        //</Switch>
+        
       )} />
   );
 }

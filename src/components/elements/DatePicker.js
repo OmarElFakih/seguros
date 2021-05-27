@@ -4,6 +4,7 @@ import DayPicker, { DateUtils } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import Button from "./Button";
 import { Context } from "../../store/appContext";
+import { DateTime } from 'luxon';
 
 export default class DatePicker extends React.Component {
   static defaultProps = {
@@ -39,8 +40,22 @@ export default class DatePicker extends React.Component {
 
     return differenceInDays + 1;
   }
+
+  getInicio(){
+    return (this.state.from == undefined ? new DateTime.now().toLocaleString({ locale: 'en-gb' }) : this.toDateTime(this.state.from).toLocaleString({ locale: 'en-gb' }));
+  }
+
+  getRetorno(){
+    return (this.state.to == undefined ? new DateTime.now().toLocaleString({ locale: 'en-gb' }) : this.toDateTime(this.state.to)).toLocaleString({ locale: 'en-gb' });
+  }
   
   static contextType = Context;
+  
+  toDateTime(date){
+    var newDate = new DateTime.local(date.getFullYear(), date.getMonth() + 1, date.getDate());
+    return newDate;
+  }
+
   
 
   render() {
@@ -66,7 +81,8 @@ export default class DatePicker extends React.Component {
           numberOfMonths={this.props.numberOfMonths}
           selectedDays={[from, { from, to }]}
           modifiers={modifiers}
-          onDayClick={this.handleDayClick}
+          onDayClick={(event) => this.handleDayClick(event)}
+          style={{display: "flex", justifyContent: "center"}}
         />
         <br />
          {from && to && (
@@ -91,10 +107,14 @@ export default class DatePicker extends React.Component {
     border-top-right-radius: 50% !important;
     border-bottom-right-radius: 50% !important;
   }
+  .DayPicker {
+    justify-content: center;
+    display: flex;
+  }
 `}</style>
         </Helmet>
         <br />
-        <Button tag="a" color="primary" wideMobile onClick={() => {actions.changeVisibility(4, true);  actions.updateTravelData("duracion", this.numberOfDays())}}>
+        <Button tag="a" color="primary" wideMobile onClick={() => {actions.changeVisibility(4, true);  actions.updateTravelData("duracion", this.numberOfDays()); actions.updateTravelData("partida", this.getInicio()); actions.updateTravelData("retorno", this.getRetorno());}}>
           Actualizar
         </Button>
       </div>

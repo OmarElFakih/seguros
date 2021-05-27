@@ -19,7 +19,8 @@ const getState = ({ getStore, getActions, setStore }) => {
                 false,
                 false,
                 false,
-                false
+                false,
+				false
             ],
 
             travelData: {
@@ -28,9 +29,11 @@ const getState = ({ getStore, getActions, setStore }) => {
                 destino: " ",
                 duracion: " ",
 				partida: " ",
+				retorno: " ",
                 pasajeros: 1,
 				edades: [0,0,0,0,0,0,0,0]
-            }
+            },
+
 
 		},
 
@@ -81,6 +84,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				console.log(getStore().travelData);
 
+			},
+
+			resetVisibility: () =>{
+				setStore({formFieldVisibility: [true, false, false, false, false, false]});
+
+			},
+
+			apiCallCotizar: () => {
+				console.log("seguro cotizado");
+			},
+
+			apicallConsulta: () => {
+
+				console.log("plan consultado");
 			}
 			
 		}
