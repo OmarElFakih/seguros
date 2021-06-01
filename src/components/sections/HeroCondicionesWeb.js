@@ -52,8 +52,8 @@ const HeroCondicionesWeb = ({
         >
             <div classname="container" style={{padding: `0px 10%`}}>
                 
-                    <h3 className="text-color-primary">Condiciones de uso web</h3>
-                    <div className="lheight-30" style={{textAlign: `justify`}}>
+                    <h3 className="text-color-primary reveal-from-bottom">Condiciones de uso web</h3>
+                    <div className="lheight-30 reveal-from-bottom" style={{textAlign: `justify`}}>
                     <p className="fz-12" style={{fontSize: `13px`}}>
                         AL USAR ESTE SITIO WEB, EL USUARIO RECONOCE QUE ACEPTA LAS SIGUIENTES CONDICIONES DE USO SIN LIMITACIÓN NI RESERVAS. FAVOR DE LEER ESTAS CONDICIONES CON ATENCIÓN ANTES DE USAR ESTE SITIO WEB. ESTOS TÉRMINOS Y CONDICIONES PODRÁN MODIFICARSE EN CUALQUIER MOMENTO MEDIANTE UNA ACTUALIZACIÓN DE ESTA PUBLICACIÓN. DICHAS MODIFICACIONES SON OBLIGATORIAS PARA EL USUARIO Y, POR LO TANTO, DEBE VISITAR ESTA PÁGINA PERIÓDICAMENTE PARA REVISAR LOS TÉRMINOS Y CONDICIONES VIGENTES A LOS QUE ESTÁ SUJETO.
                     </p>
@@ -72,10 +72,11 @@ const HeroCondicionesWeb = ({
                         </li>
                     </ol>
                 </div>
+                <div className="reveal-from-bottom">
                         <Accordion key={1} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={1} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={1} >
                                         Actividades prohibidas
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -121,9 +122,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={2} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={2} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={2} >
                                     Cláusula de extención de la responsabilidad
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -139,9 +140,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={3} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={3} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={3} >
                                         Vínculos a sitios fuera de la página web de la empresa
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -157,9 +158,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={4} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={4} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={4} >
                                        Limitación de responsabilidad
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -179,9 +180,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={5} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={5} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={5} >
                                         Restricciones al uso de materiales
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -201,9 +202,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={6} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={6} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={6} >
                                         Cueastiones jurisdiccionales
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -228,9 +229,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={7} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={7} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={7} >
                                         Propiedad de la información
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -256,9 +257,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={8} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={8} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={8} >
                                        Marcas comerciales y derechos de autor
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -289,9 +290,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={9} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={9} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={9} >
                                        Licencias de software
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -350,9 +351,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={10} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={10} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={10} >
                                         Destinos de viajes
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -380,9 +381,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={11} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={11} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={11} >
                                         Indemnización
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -415,9 +416,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={12} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={12} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={12} >
                                         Tasas de cambio
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -441,9 +442,9 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                         <Accordion key={13} >
-                            <Card className="blueBackground">
+                            <Card >
                                 <Card.Header classname="border-bottom">
-                                    <Accordion.Toggle as={Button} variant="link" eventKey={13} style={{color: `#faa520`}}>
+                                    <Accordion.Toggle as={Button} variant="link" eventKey={13} >
                                         Contacto
                                     </Accordion.Toggle>
                                 </Card.Header>
@@ -475,7 +476,7 @@ const HeroCondicionesWeb = ({
                             </Card>
                         </Accordion>
                 
-                
+                </div>
             </div>
         </section>
     );

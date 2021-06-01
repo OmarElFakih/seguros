@@ -48,9 +48,11 @@ const DuracionMaxima = () => {
 
 
     return(
+        
         <div>
+            <h3 id="duracion">Fecha del viaje</h3>
             <select className="inputCotizador" onChange={e => setDuracion(e.target.value)}>
-                <option selected value=" ">Duración máxima</option>
+                <option selected value=" ">Duracion maxima</option>
                 <option value={30}>30 días</option>
                 <option value={45}>45 días</option>
                 <option value={60}>60 días</option>
@@ -72,7 +74,7 @@ const DuracionMaxima = () => {
             />
             <br />
             
-            <Button tag="a" color="primary" wideMobile onClick={() => {actions.changeVisibility(4, true); actions.updateTravelData("duracion", duracion); actions.updateTravelData("partida", inicio.toLocaleString({locale: "en-gb"})); actions.updateTravelData("retorno", getRetorno())}}>
+            <Button tag="a" color="primary" wideMobile onClick={() => {actions.changeVisibility(4, true); actions.updateTravelData("duracion", duracion); actions.updateTravelData("partida", inicio.toLocaleString({locale: "en-gb"})); actions.updateTravelData("retorno", getRetorno()); actions.updateToScroll("pasajeros")}}>
                 Actualizar
             </Button>
             

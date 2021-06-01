@@ -58,19 +58,20 @@ const SplitCondicionado = ({
       className={outerClasses}
     >
       <div classname="container" style={{ padding: `0px 10%` }}>
-        <h3 className="text-color-primary">
+        <h3 className="text-color-primary reveal-from-bottom">
           condicionado
         </h3>
-        <p>
+        <p className="reveal-from-bottom">
           Invitamos a los Beneficiarios de un voucher o plan de asistencia <strong>ORANGE TRAVEL ASSIST</strong> &nbsp; 
           a leer estas condiciones Generales antes de emprender su viaje. En las siguientes páginas, 
           encontrará las Condiciones Generales, Condiciones Particulares y Exclusiones, 
           así como las instrucciones que le permitirán un mejor uso de los beneficios y servicios contratados.
         </p>
+        <div className="reveal-from-bottom">
         <Accordion key={1} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={1} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={1} >
                 Introduccion
               </Accordion.Toggle>
             </Card.Header>
@@ -245,9 +246,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={2} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={2} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={2} >
               Beneficiario/Edad Límite
               </Accordion.Toggle>
             </Card.Header>
@@ -279,9 +280,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={3} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={3} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={3} >
               Vigencia - Validez
               </Accordion.Toggle>
             </Card.Header>
@@ -368,9 +369,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={4} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={4} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={4} >
                 Validez Geográfica
               </Accordion.Toggle>
             </Card.Header>
@@ -387,9 +388,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={5} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={5} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={5} >
                 Procedimiento para solicitar asistencia - centrales de asistencia
               </Accordion.Toggle>
             </Card.Header>
@@ -447,9 +448,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={6} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={6} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={6} >
                 Obligaciones del beneficiario
               </Accordion.Toggle>
             </Card.Header>
@@ -481,9 +482,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={7} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={7} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={7} >
                 Obligaciones asumidas por <strong>Orange Travel Assist</strong>
               </Accordion.Toggle>
             </Card.Header>
@@ -514,9 +515,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={8} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={8} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={8} >
                 Moneda de alcances y servicios
               </Accordion.Toggle>
             </Card.Header>
@@ -534,9 +535,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={9} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={9} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={9} >
                 Definicion de los beneficios
               </Accordion.Toggle>
             </Card.Header>
@@ -922,9 +923,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={10} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={10} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={10} >
                 Beneficios adicionales de compra opcional por el beneficiario
               </Accordion.Toggle>
             </Card.Header>
@@ -1117,9 +1118,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={11} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={11} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={11} >
                Exclusión aplicable a todos los servicios y beneficios
               </Accordion.Toggle>
             </Card.Header>
@@ -1170,9 +1171,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={12} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={12} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={12} >
                 Subrogación y cesión de derechos
               </Accordion.Toggle>
             </Card.Header>
@@ -1216,9 +1217,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={13} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={13} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={13} >
                 Circunstancias excepcionales de inejecución iniputable
               </Accordion.Toggle>
             </Card.Header>
@@ -1232,9 +1233,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={14} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={14} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={14} >
                 Recurso
               </Accordion.Toggle>
             </Card.Header>
@@ -1248,9 +1249,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={15} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={15} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={15} >
                 Responsabilidad
               </Accordion.Toggle>
             </Card.Header>
@@ -1271,9 +1272,9 @@ const SplitCondicionado = ({
           </Card>
         </Accordion>
         <Accordion key={16} >
-          <Card className="blueBackground">
+          <Card >
             <Card.Header classname="border-bottom">
-              <Accordion.Toggle as={Button} variant="link" eventKey={16} style={{ color: `#faa520` }}>
+              <Accordion.Toggle as={Button} variant="link" eventKey={16} >
                 Caducidad - Resolución - Modificación 
               </Accordion.Toggle>
             </Card.Header>
@@ -1286,7 +1287,7 @@ const SplitCondicionado = ({
             </Accordion.Collapse>
           </Card>
         </Accordion>
-
+        </div>
       </div>
 
     </section>

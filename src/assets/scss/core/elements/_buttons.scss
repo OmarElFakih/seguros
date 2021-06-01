@@ -91,11 +91,12 @@
 }
 
 .button-primary {
-	color: color(button-primary);
+	color: get-color(light, 3);//color(button-primary);
     background-color: color-bg(button-primary);
 	border-color: color-border(button-primary);
 
     &:hover {
+		color: get-color(light, 3);
         background-color: color-bg(button-primary-hover);
 		border-color: color-border(button-primary-hover);
     }

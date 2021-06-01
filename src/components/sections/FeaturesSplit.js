@@ -82,7 +82,7 @@ const FeaturesSplit = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   
                   </div>
-                <h3 className="mt-0 mb-12 text-color-primary">
+                <h3 className="mt-0 mb-12">
                   Viajes por dia
                   </h3>
                 <p className="m-0">
@@ -99,7 +99,7 @@ const FeaturesSplit = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   
                   </div>
-                <h3 className="mt-0 mb-12 text-color-primary">
+                <h3 className="mt-0 mb-12">
                   Plan anual o multiviajes
                   </h3>
                 <p className="m-0">
@@ -131,7 +131,7 @@ const FeaturesSplit = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   
                   </div>
-                <h3 className="mt-0 mb-12 text-color-primary">
+                <h3 className="mt-0 mb-12">
                   Consulte su plan
                   </h3>
                 <p className="m-0">  
@@ -162,7 +162,7 @@ const FeaturesSplit = ({
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   
                   </div>
-                <h3 className="mt-0 mb-12 text-color-primary">
+                <h3 className="mt-0 mb-12">
                   Viaje seguro, Viaje confiado, Viaje tranquilo
                   </h3>
                 <p className="m-0">

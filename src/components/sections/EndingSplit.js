@@ -2,9 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
-import Image from '../elements/Image';
-import Button from '../elements/Button';
+
 import FormPage from '../elements/Form';
+import ContactInfo from "../elements/ContactInfo";
 
 
 const propTypes = {
@@ -65,12 +65,12 @@ const EndingSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 
-                  {/*<ContactInfo />*/}                  
+                  <ContactInfo />                  
                
               </div>
 
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
-                 {/*<FormPage />*/}
+                 <FormPage />
                  
               </div>
             </div>  

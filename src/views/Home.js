@@ -16,7 +16,7 @@ const Home = () => {
       <Hero className="illustration-section-01" />
       {/*<OrangeCarousel />*/}
       <FeaturesTiles />
-      <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
+      <FeaturesSplit invertMobile topDivider imageFill />
       <Testimonial topDivider />
       {/*<Cta split />*/}
       <EndingSplit />

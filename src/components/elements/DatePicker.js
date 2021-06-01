@@ -66,16 +66,16 @@ export default class DatePicker extends React.Component {
 
     return (
       <div className="RangeExample">
-        <p>
+        <h3 id="duracion">
           {/*!from && !to && 'Please select the first day.'}
           {from && !to && 'Please select the last day.'}
           {from &&
             to &&
             `Selected from ${from.toLocaleDateString()} to
           ${to.toLocaleDateString()}`*/}
-          Duración del viaje
+          Fecha del viaje
           
-        </p>
+        </h3>
         <DayPicker
           className="Selectable"
           numberOfMonths={this.props.numberOfMonths}
@@ -114,7 +114,7 @@ export default class DatePicker extends React.Component {
 `}</style>
         </Helmet>
         <br />
-        <Button tag="a" color="primary" wideMobile onClick={() => {actions.changeVisibility(4, true);  actions.updateTravelData("duracion", this.numberOfDays()); actions.updateTravelData("partida", this.getInicio()); actions.updateTravelData("retorno", this.getRetorno());}}>
+        <Button tag="a" color="primary" wideMobile onClick={() => {actions.changeVisibility(4, true);  actions.updateTravelData("duracion", this.numberOfDays()); actions.updateTravelData("partida", this.getInicio()); actions.updateTravelData("retorno", this.getRetorno()); actions.updateToScroll("pasajeros");}}>
           Actualizar
         </Button>
       </div>

@@ -34,6 +34,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				edades: [0,0,0,0,0,0,0,0]
             },
 
+			toScroll: ""
+
 
 		},
 
@@ -75,15 +77,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 
             },
 
-			updateTravelData: (key, value) => {
+			updateTravelData: (key, value, idToScroll) => {
 				const tempTravelData = getStore().travelData;
 
 				tempTravelData[key] = value;
 
 				setStore({travelData: tempTravelData})
 
+				
+
 				console.log(getStore().travelData);
 
+			},
+
+			updateToScroll: (idToScroll) => {
+				setStore({toScroll: idToScroll});
 			},
 
 			resetVisibility: () =>{

@@ -26,7 +26,7 @@ const Pasajeros = () => {
 
     return (
         <div>
-            <p style={{marginTop: "25px", marginBottom: "-1px"}}>número de pasajeros</p>
+            <h3 style={{marginTop: "25px", marginBottom: "-1px"}} id="pasajeros">Número de pasajeros</h3>
             <br /> 
             <select className="inputCotizador" onChange = {e => setPasajeros(e.target.value)}>
                 <option selected value={1}>1</option>
@@ -41,6 +41,7 @@ const Pasajeros = () => {
             <br />
             <p style={{marginTop: "25px", marginBottom: "-1px"}}>edades</p>
             <div style={{display: "block"}}>
+                
                 <input className="inputCotizador" type="number" min={1} step={1} onChange={e => updateEdades(0, e.target.value)}/>
                 {pasajeros >= 2 ? <input className="inputCotizador" type="number" min={1} step={1} onChange={e => updateEdades(1, e.target.value)}/> : null}
                 {pasajeros >= 3 ? <input className="inputCotizador" type="number" min={1} step={1} onChange={e => updateEdades(2, e.target.value)}/> : null}

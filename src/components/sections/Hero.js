@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState , useContext} from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
-import Image from '../elements/Image';
-import Modal from '../elements/Modal';
+
 import backgroundImage from '../../assets/images/traveling.jpg'
+import {useHistory} from "react-router-dom";
+import { Context } from "../../store/appContext";
 
 const propTypes = {
   ...SectionProps.types
@@ -53,6 +54,10 @@ const Hero = ({
     bottomDivider && 'has-bottom-divider'
   );
 
+  const history = useHistory();
+
+  const { store, actions } = useContext(Context);
+
   return (
     <section
       {...props}
@@ -70,16 +75,16 @@ const Hero = ({
       <div className="container-sm" >
         <div className={innerClasses}>
           <div className="hero-content" >
-            <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-             <span className="text-color-primary">Orange</span> Travel Assist
+            <h1 className="mt-0 mb-16 reveal-from-bottom white" data-reveal-delay="200">
+             <span className="orange">Orange</span> Travel Assist
             </h1>
             <div className="container-xs">
-              <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+              <p className="m-0 mb-32 reveal-from-bottom white" data-reveal-delay="400">
                 Donde quiera que viaje, ¡estaremos allí!
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 {/*<ButtonGroup>*/}
-                  <Button tag="a" color="primary" wideMobile href="#">
+                  <Button tag="a" color="primary" wideMobile onClick={() => {history.push("/cotizador"); actions.resetVisibility();}}>
                     Cotizar plan
                     </Button>
                 {/*</ButtonGroup>*/}

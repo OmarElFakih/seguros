@@ -24,6 +24,7 @@ const Footer = ({
 
   const classes = classNames(
     'site-footer center-content-mobile',
+    "blueBackground",
     topOuterDivider && 'has-top-divider',
     className
   );
